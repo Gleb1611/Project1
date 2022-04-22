@@ -3,6 +3,8 @@
 
 class Group
 {
+	friend int getSize();
+	friend void set(int index, Student student);
 private:
 	string name;
 	int size;
