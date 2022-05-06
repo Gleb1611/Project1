@@ -9,8 +9,8 @@ void testing(Student* st)
 }
 
 int main() {
-
-	
+	Student* st = new Student("Alex", 15, 10, 'm');
+	testing(st);
 
 	return 0;
 }
