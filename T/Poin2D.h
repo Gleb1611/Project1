@@ -15,14 +15,16 @@ public:
 	void setY(int x);
 	string getInfo();
 
-	Poin2D operator + (Poin2D point) const;
-	Poin2D operator - (Poin2D point) const;
+	Poin2D operator +(Poin2D point) const;
+	Poin2D operator -(Poin2D point) const;
+
+	Poin2D operator ++();
+	Poin2D operator --();
 
 	Poin2D operator ++(int);
 	Poin2D operator --(int);
 
-	Poin2D operator ++(int);
-	Poin2D operator --(int);
+	int operator *(Poin2D point) const;
 
 };
 

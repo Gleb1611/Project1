@@ -8,23 +8,23 @@ Poin2D::Poin2D(int x, int y) : x(0), y(0) {
 
 }
 
-int Poin2D::getX() const 
+int Poin2D::getX() const
 {
 	return x;
 }
-int Poin2D::getY() const 
+int Poin2D::getY() const
 {
 	return y;
 }
 void Poin2D::setX(int x)
 {
-	return x;
+	this->x = x;
 }
 void Poin2D::setY(int y)
 {
-	return y;
+	this->y = y;
 }
-string Poin2D::getInfo() 
+string Poin2D::getInfo()
 {
 	return "Point: x" + to_string(x) + ",y = " + to_string(y);
 }

@@ -1,6 +1,6 @@
 #include "Student.h" 
 #include "Group.h" 
-#include "Maneger.h" 
+#include "Manager.h" 
 #include "Leader.h"
 
 void testing(Student* st)

@@ -149,7 +149,7 @@
     <ClInclude Include="Group.h" />
     <ClInclude Include="Header.h" />
     <ClInclude Include="Leader.h" />
-    <ClInclude Include="Maneger.h" />
+    <ClInclude Include="Manager.h" />
     <ClInclude Include="Student.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
