@@ -1,4 +1,4 @@
-#include "Student.h" 
+#include "Student.h"
 
 int Student::count = 0;
 
@@ -18,16 +18,19 @@ Student::Student(string name, int age, double mark, char sex) {
 	this->sex = sex;
 }
 
-Student::~Student()
-{
+Student::~Student() {
 	count--;
+}
+
+int Student::getCount() {
+	return count;
 }
 
 string Student::getName() {
 	return name;
 }
 
-void Student::setName(string initName) {
+void Student::setName(string name) {
 	this->name = name;
 }
 
@@ -36,7 +39,8 @@ int Student::getAge() {
 }
 
 void Student::setAge(int age) {
-	if (age >= MIN_STUDENT_AGE && age <= MAX_STUDENT_AGE) {
+	if (age >= MIN_STUDENT_AGE
+		&& age <= MAX_STUDENT_AGE) {
 		this->age = age;
 	}
 }

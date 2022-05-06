@@ -1,13 +1,15 @@
-#pragma once 
-#include "Header.h" 
+#pragma once
+#include "Header.h"
 
 class Student {
+	friend void changeMark(Student& st);
+
 private:
 	static int count;
 
 	string name;
 	int age;
-	int mark;
+	double mark;
 	char sex;
 
 public:
@@ -21,16 +23,20 @@ public:
 	Student(string name, int age, double mark, char sex);
 	~Student();
 
-	static void getCount();
+	// 2) static method definition
+	static int getCount();
 
 	string getName();
 	void setName(string name);
+
 	int getAge();
 	void setAge(int age);
+
 	double getMark();
 	void setMark(double mark);
+
 	char getSex();
 	void setSex(char sex);
 
-	string getInfo();
+	virtual string getInfo();
 };

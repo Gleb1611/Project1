@@ -1,10 +1,10 @@
-#pragma once 
-#include "Student.h" 
+#pragma once
+#include "Student.h"
 
 class Group
 {
-	friend int getSize();
-	friend void set(int index, Student student);
+	friend class Manager;
+
 private:
 	string name;
 	int size;

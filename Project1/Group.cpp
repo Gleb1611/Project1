@@ -1,4 +1,4 @@
-#include "Group.h" 
+#include "Group.h"
 
 Group::Group() {
 	name = "no group name";
@@ -37,7 +37,7 @@ int Group::getSize() {
 }
 
 Student Group::get(int index) {
-	if (list == NULL  || index < 0 || index >= size) {
+	if (list == NULL || index < 0 || index >= size) {
 		return Student("", 0, 0, ' ');
 	}
 	else {

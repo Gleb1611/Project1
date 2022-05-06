@@ -1,4 +1,4 @@
-#include "Maneger.h" 
+#include "Manager.h"
 
 Manager::Manager(string name) {
 	this->name = name;
@@ -7,12 +7,12 @@ Manager::Manager(string name) {
 double Manager::calculateAvgMark(Group group) {
 	double avg = 0;
 
-	for (int i = 0; i < group.getSize(); i++)
+	for (int i = 0; i < group.size; i++)
 	{
-		avg += group.get(i).getMark();
+		avg += group.list[i].getMark();
 	}
 
-	avg /= group.getSize();
+	avg /= group.size;
 
 	return avg;
 }
@@ -20,21 +20,21 @@ double Manager::calculateAvgMark(Group group) {
 double Manager::calculateAvgAge(Group group) {
 	double avg = 0;
 
-	for (int i = 0; i < group.getSize(); i++)
+	for (int i = 0; i < group.size; i++)
 	{
-		avg += group.get(i).getAge();
+		avg += group.list[i].getAge();
 	}
 
-	avg /= group.getSize();
+	avg /= group.size;
 
 	return avg;
 }
 
 int Manager::getCountOfMale(Group group) {
 	int count = 0;
-	for (int i = 0; i < group.getSize(); i++)
+	for (int i = 0; i < group.size; i++)
 	{
-		if (group.get(i).getSex() == 'm') {
+		if (group.list[i].getSex() == 'm') {
 			count++;
 		}
 	}
@@ -44,5 +44,5 @@ int Manager::getCountOfMale(Group group) {
 
 int Manager::getCountOfFemale(Group group) {
 	int count = getCountOfMale(group);
-	return group.getSize() - count;
+	return group.size - count;
 }
